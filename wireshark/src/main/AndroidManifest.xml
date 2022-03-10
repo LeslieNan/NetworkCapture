@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.leslienan.wireshark">
+
+  <application>
+    <activity
+      android:name=".ui.NetLogDetailActivity"
+      android:exported="false" />
+    <activity
+      android:name=".ui.WiresharkActivity"
+      android:exported="false"
+      android:label="Wireshark"
+      android:taskAffinity="com.leslienan.wireshark.${applicationId}" />
+
+    <activity-alias
+      android:name=".WiresharkActivity"
+      android:enabled="true"
+      android:exported="true"
+      android:icon="@mipmap/wireshark_logo"
+      android:targetActivity=".ui.WiresharkActivity"
+      android:taskAffinity="com.leslienan.wireshark.${applicationId}">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity-alias>
+
+    <activity
+      android:name=".ui.NetLogListActivity"
+      android:theme="@style/WiresharkTheme" />
+  </application>
+
+</manifest>

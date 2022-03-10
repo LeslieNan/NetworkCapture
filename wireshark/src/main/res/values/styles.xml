@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="WiresharkTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+    <item name="android:windowBackground">#F4F6F9</item>
+  </style>
+  <!-- SheetDialog进出动画,出场由下往上 -->
+  <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+    <item name="android:windowEnterAnimation">@anim/sheet_dialog_in</item>
+    <item name="android:windowExitAnimation">@anim/sheet_dialog_out</item>
+  </style>
+</resources>

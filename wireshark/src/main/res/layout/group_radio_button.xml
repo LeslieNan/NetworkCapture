@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:id="@+id/rg_method"
+  android:orientation="vertical">
+
+  <RadioButton
+    android:id="@+id/rb_none"
+    android:layout_width="match_parent"
+    android:checked="true"
+    android:layout_height="wrap_content"
+    android:text="不限" />
+
+  <RadioButton
+    android:id="@+id/rb_get"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="GET"
+    android:visibility="gone"
+    tools:visibility="visible" />
+
+  <RadioButton
+    android:id="@+id/rb_post"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="POST"
+    android:visibility="gone" />
+
+  <RadioButton
+    android:id="@+id/rb_head"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="HEAD"
+    android:visibility="gone" />
+
+  <RadioButton
+    android:id="@+id/rb_put"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="PUT"
+    android:visibility="gone" />
+
+  <RadioButton
+    android:id="@+id/rb_delete"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="DELETE"
+    android:visibility="gone" />
+
+  <RadioButton
+    android:id="@+id/rb_connect"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="CONNECT"
+    android:visibility="gone" />
+
+  <RadioButton
+    android:id="@+id/rb_options"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="OPTIONS"
+    android:visibility="gone" />
+
+  <RadioButton
+    android:id="@+id/rb_trace"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="TRACE"
+    android:visibility="gone" />
+
+</RadioGroup>

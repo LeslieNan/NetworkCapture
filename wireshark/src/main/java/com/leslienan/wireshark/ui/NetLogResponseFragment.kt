@@ -1,6 +1,11 @@
 package com.leslienan.wireshark.ui
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.os.Bundle
+import android.widget.Toast
+import com.leslienan.wireshark.LogInterceptor
 import com.leslienan.wireshark.NetLogModel
 import com.leslienan.wireshark.base.BaseFragment
 import com.leslienan.wireshark.databinding.FragmentNetLogResponseBinding
@@ -10,8 +15,7 @@ import com.leslienan.wireshark.databinding.FragmentNetLogResponseBinding
  * All rights reserved
  * Author: lihaonan@lollitech.com
  */
-internal class NetLogResponseFragment :
-    BaseFragment<FragmentNetLogResponseBinding>() {
+internal class NetLogResponseFragment : BaseFragment<FragmentNetLogResponseBinding>() {
 
     companion object {
         const val KEY_NET_LOG = "KEY_NET_LOG"
@@ -24,15 +28,37 @@ internal class NetLogResponseFragment :
         }
     }
 
-    private var netLogModel: NetLogModel? = null
+    private lateinit var netLogModel: NetLogModel
 
     override fun initArgument() {
-        netLogModel = arguments?.getParcelable(KEY_NET_LOG)
+        netLogModel = arguments?.getParcelable(KEY_NET_LOG)!!
     }
 
     override fun initView() {
-        binding.tvUrl.text = netLogModel?.response+"\n响应时间："+netLogModel?.duration+"ms"
-        binding.tvHeader.text = netLogModel?.responseHeader
-        binding.tvBody.text = netLogModel?.responseBody
+        binding.tvUrl.text = netLogModel.response + "\n响应时间：" + netLogModel?.duration + "ms"
+        binding.tvHeader.text = netLogModel.responseHeader
+        binding.tvBody.text = netLogModel.responseBody
+    }
+
+    override fun initClick() {
+        var isFormat = false
+        binding.tvJson.setOnClickListener {
+            if (!isFormat) {
+                binding.tvBody.text = LogInterceptor.formatJson(netLogModel.responseBody)
+                isFormat = true
+            }
+        }
+        binding.tvCopy.setOnClickListener {
+            try {
+                val manager: ClipboardManager =
+                    requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                val mClipData = ClipData.newPlainText("Label", binding.tvBody.text)
+                // 将ClipData内容放到系统剪贴板里。
+                manager.setPrimaryClip(mClipData)
+                Toast.makeText(requireContext(), "已复制到粘贴板", Toast.LENGTH_SHORT).show()
+            } catch (e: java.lang.Exception) {
+                e.printStackTrace()
+            }
+        }
     }
 }

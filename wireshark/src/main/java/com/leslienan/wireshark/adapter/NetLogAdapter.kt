@@ -38,9 +38,9 @@ class NetLogAdapter(context: Context) :
 
     fun addData(data: NetLogModel) {
         val position = list.size
-        list.add(data)
-        tempList.add(data)
-        selectList.add(false)
+        list.add(0, data)
+        tempList.add(0, data)
+        selectList.add(0, false)
         notifyItemInserted(position)
     }
 

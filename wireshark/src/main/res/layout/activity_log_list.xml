@@ -1,105 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  tools:context=".ui.NetLogListActivity">
-
-  <androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/cl_filter"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:background="@color/design_default_color_primary"
-    app:layout_constraintTop_toTopOf="parent">
+    android:layout_height="match_parent"
+    tools:context=".ui.NetLogListActivity">
 
-    <TextView
-      android:id="@+id/tv_title"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="全部请求"
-      android:textColor="@color/white"
-      android:textSize="18sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_filter"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/design_default_color_primary"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-      android:id="@+id/tv_filter"
-      android:layout_width="34dp"
-      android:layout_height="34dp"
-      android:layout_marginEnd="@dimen/horizontal_margin"
-      android:padding="5dp"
-      android:src="@mipmap/icon_filter"
-      android:textColor="@color/white"
-      android:textSize="16sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部请求"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-      android:id="@+id/tv_edit"
-      android:layout_width="34dp"
-      android:layout_height="34dp"
-      android:layout_marginStart="@dimen/horizontal_margin"
-      android:padding="5dp"
-      android:src="@mipmap/icon_edit"
-      android:textColor="@color/white"
-      android:textSize="16sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/tv_filter"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="@dimen/horizontal_margin"
+            android:padding="5dp"
+            android:src="@mipmap/icon_filter"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-      android:id="@+id/tv_edit_cancel"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="@dimen/horizontal_margin"
-      android:padding="5dp"
-      android:text="取消"
-      android:textColor="@color/white"
-      android:textSize="16sp"
-      android:visibility="gone"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/tv_edit"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:padding="5dp"
+            android:src="@mipmap/icon_edit"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-      android:id="@+id/tv_edit_all"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="5dp"
-      android:padding="5dp"
-      android:text="全选"
-      android:visibility="gone"
-      android:textColor="@color/white"
-      android:textSize="16sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toEndOf="@id/tv_edit_cancel"
-      app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tv_edit_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:padding="5dp"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
 
-    <TextView
-      android:id="@+id/tv_edit_delete"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="5dp"
-      android:padding="5dp"
-      android:text="删除"
-      android:textColor="@color/white"
-      android:visibility="gone"
-      android:textSize="16sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toEndOf="@id/tv_edit_all"
-      app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tv_edit_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            android:text="全选"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_edit_cancel"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_edit_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_edit_all"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
 
-  <androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/rv_wire"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/cl_filter" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_wire"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_filter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,67 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:orientation="vertical">
-
-  <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginHorizontal="@dimen/horizontal_margin"
-      android:layout_marginTop="@dimen/vertical_margin"
-      android:text="响应信息"
-      android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-      android:id="@+id/tv_url"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginHorizontal="@dimen/horizontal_margin"
-      android:layout_marginTop="@dimen/vertical_margin"
-      android:background="@color/white"
-      android:padding="10dp"
-      android:textIsSelectable="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:text="响应信息"
+            android:textStyle="bold" />
 
-    <TextView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginHorizontal="@dimen/horizontal_margin"
-      android:layout_marginTop="@dimen/vertical_margin"
-      android:text="响应头部"
-      android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:background="@drawable/ssc_grey_5"
+            android:padding="10dp"
+            android:textIsSelectable="true" />
 
-    <TextView
-      android:id="@+id/tv_header"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginHorizontal="@dimen/horizontal_margin"
-      android:layout_marginTop="@dimen/vertical_margin"
-      android:background="@color/white"
-      android:padding="10dp"
-      android:textIsSelectable="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:text="响应头部"
+            android:textStyle="bold" />
 
-    <TextView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginHorizontal="@dimen/horizontal_margin"
-      android:layout_marginTop="@dimen/vertical_margin"
-      android:text="响应数据"
-      android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:background="@drawable/ssc_grey_5"
+            android:padding="10dp"
+            android:textIsSelectable="true" />
 
-    <TextView
-      android:id="@+id/tv_body"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginHorizontal="@dimen/horizontal_margin"
-      android:layout_marginTop="@dimen/vertical_margin"
-      android:background="@color/white"
-      android:padding="10dp"
-      android:textIsSelectable="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:text="响应数据"
+            android:textStyle="bold" />
 
-  </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/horizontal_margin"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/tv_json"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ssc_grey_5"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="格式化" />
+
+            <TextView
+                android:id="@+id/tv_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/ssc_grey_5"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="复制" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/ssc_grey_5"
+            android:padding="10dp"
+            android:textIsSelectable="true" />
+
+    </LinearLayout>
 </androidx.core.widget.NestedScrollView>

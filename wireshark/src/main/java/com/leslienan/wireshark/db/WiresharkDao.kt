@@ -99,7 +99,7 @@ class WiresharkDao private constructor() {
             val cursor = db?.query(
                 SQLHelper.TABLE_NAME, SQLHelper.FIELD_LIST,
                 null, null, null,
-                null, null
+                null, "${SQLHelper.FIELD_ID} desc"
             )
             val netLogList = ArrayList<NetLogModel>()
             cursor?.apply {

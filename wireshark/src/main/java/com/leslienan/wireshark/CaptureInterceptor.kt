@@ -1,6 +1,5 @@
 package com.leslienan.wireshark
 
-import android.content.Context
 import okhttp3.*
 import okhttp3.ResponseBody.Companion.toResponseBody
 import okio.Buffer
@@ -11,7 +10,7 @@ import java.io.IOException
  * All rights reserved
  * Author: leslienan@qq.com
  */
-class WiresharkInterceptor() : Interceptor {
+class CaptureInterceptor() : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val startTime = System.currentTimeMillis()
         val oldRequest = chain.request()

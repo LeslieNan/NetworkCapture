@@ -7,6 +7,32 @@
     android:orientation="vertical"
     tools:context=".ui.NetLogDetailActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/design_default_color_primary"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/horizontal_margin">
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:src="@drawable/icon_back_white" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:ellipsize="start"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:singleLine="true" />
+    </LinearLayout>
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_top"
         android:layout_width="match_parent"

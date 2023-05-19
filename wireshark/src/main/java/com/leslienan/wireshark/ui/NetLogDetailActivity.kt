@@ -54,10 +54,10 @@ internal class NetLogDetailActivity :
                 }
             })
         }
-    }
-
-    override fun initData() {
-
+        binding.btnClose.setOnClickListener {
+            finish()
+        }
+        binding.tvTitle.text = netLogModel?.request
     }
 
 }

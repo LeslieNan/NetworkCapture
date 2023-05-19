@@ -6,7 +6,7 @@ import com.leslienan.wireshark.WiresharkUtil
 import com.leslienan.wireshark.base.BaseActivity
 import com.leslienan.wireshark.databinding.ActivityWiresharkBinding
 
-internal class WiresharkActivity : BaseActivity<ActivityWiresharkBinding>() {
+internal class NetCaptureActivity : BaseActivity<ActivityWiresharkBinding>() {
 
     override fun initView() {
         WiresharkUtil.init(this)

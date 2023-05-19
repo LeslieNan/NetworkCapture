@@ -7,17 +7,17 @@
       android:name=".ui.NetLogDetailActivity"
       android:exported="false" />
     <activity
-      android:name=".ui.WiresharkActivity"
+      android:name=".ui.NetCaptureActivity"
       android:exported="false"
       android:label="Wireshark"
       android:taskAffinity="com.leslienan.wireshark.${applicationId}" />
 
     <activity-alias
-      android:name=".WiresharkActivity"
+      android:name=".NetCaptureActivity"
       android:enabled="true"
       android:exported="true"
       android:icon="@mipmap/wireshark_logo"
-      android:targetActivity=".ui.WiresharkActivity"
+      android:targetActivity=".ui.NetCaptureActivity"
       android:taskAffinity="com.leslienan.wireshark.${applicationId}">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
